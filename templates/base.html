@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/app.css">
+    <title>{% block title%}TITLE{% endblock %}</title>
+
+</head>
+<body>
+    {% with messages = get_flashed_messages(with_categories=true)%}
+    {% if messages%}
+    {% for cat, msg in messages%}
+        <p class="{{cat}}">{{msg}}</p>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+
+    {% block header %}HEADER{% endblock %}
+
+    {% block content %}
+    CONTENT
+    {% endblock %}
+    
+</body>
+</html>
