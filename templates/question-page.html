@@ -10,6 +10,9 @@
         <input type="radio" id="{{choice}}" name="choice" value="{{choice}}" required="true">
         <label for="{{choice}}">{{choice}}</label>
         {% endfor %}
+        {% if allow_text == True: %}
+        <input type="text" name="comment" placeholder="Enter Comment" required="true">
+        {% endif %}
         <button>Submit</button>
     </form>
 {% endblock %}

@@ -6,4 +6,10 @@
 
 {% block content %}
     <h3>Thank you for completing the survery!</h3>
+    <h3>You answered:</h3>
+    <ul>
+    {% for q, a in q_and_a %}
+    <li>{{q}} - {{a}}</li>
+    {% endfor %}
+    </ul>
 {% endblock %}

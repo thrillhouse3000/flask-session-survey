@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Survery Home Page{% endblock %}
+
+{% block header %}<h1>{{title}}</h1>{% endblock %}
+
+{% block content %}
+    <p>{{instructions}}</p>
+    <form action="/set-session" method="POST">
+        <button>Start Survey</button>
+    </form>
+{% endblock %}
